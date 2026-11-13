@@ -1238,18 +1238,18 @@ if(window.__MK_EMERGENCY_ONLY){setTimeout(()=>{try{$('#open').click()}catch(e){}
   const EULA_CSS = (`
 §{--bg:#0a0c0f;--ln:rgba(180,200,160,.14);--tx:#d4d9c8;--mu:#7a8570;--acc:#c4a35a;--acc2:#e8d5a3;--ok:#6ee7a0;--bad:#ff7a7a;position:fixed;inset:0;z-index:2147483600;display:grid;place-items:center;padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));background:rgba(3,5,8,.93);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tx);color-scheme:dark light}
 § *{box-sizing:border-box;margin:0}
-§ .dlg{width:min(96vw,800px);max-height:94vh;max-height:94dvh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:var(--bg);border:1px solid var(--ln);border-radius:16px;overflow:hidden;box-shadow:0 40px 100px #000}
-§ .hd{padding:16px 22px 12px;border-bottom:1px solid var(--ln);background:rgba(17,21,28,.95)}
+§ .dlg{width:min(96vw,800px);max-height:94vh;max-height:94dvh;display:flex;flex-direction:column;background:var(--bg);border:1px solid var(--ln);border-radius:16px;overflow:hidden;box-shadow:0 40px 100px #000}
+§ .hd{flex:0 0 auto;padding:16px 22px 12px;border-bottom:1px solid var(--ln);background:rgba(17,21,28,.95)}
 § .hd h2{font-size:1.05rem;font-weight:500;letter-spacing:.12em;color:var(--acc2)}
 § .hd p{color:var(--mu);font-size:.85rem;margin-top:3px}
-§ .tx{overflow-y:auto;padding:18px 22px 26px;outline:0;scrollbar-width:thin;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+§ .tx{flex:1 1 auto;min-height:0;overflow-y:auto;padding:18px 22px 26px;outline:0;scrollbar-width:thin;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
 § .tx:focus-visible{box-shadow:inset 0 0 0 2px rgba(196,163,90,.5)}
 § .tx h3{font-size:.95rem;font-weight:600;color:var(--acc2);margin:20px 0 6px}
 § .tx h3:first-child{margin-top:0}
 § .tx h3 em{font-style:normal;font-size:.7rem;font-weight:500;color:var(--bad);border:1px solid rgba(255,122,122,.5);border-radius:99px;padding:1px 9px;margin-left:8px;white-space:nowrap}
 § .tx p{font-size:.9rem;margin-bottom:8px}
 § .tx .lic{white-space:pre-wrap;font:12px/1.55 ui-monospace,"SF Mono",Menlo,Consolas,monospace;color:#b9c0ae;background:#0e1218;border:1px solid var(--ln);border-radius:10px;padding:14px}
-§ .ft{display:grid;gap:11px;padding:14px 22px 18px;border-top:1px solid var(--ln);background:rgba(17,21,28,.95)}
+§ .ft{flex:0 0 auto;display:grid;gap:11px;padding:14px 22px 18px;border-top:1px solid var(--ln);background:rgba(17,21,28,.95)}
 § .stp{display:flex;flex-wrap:wrap;gap:8px}
 § .stp span{font-size:.78rem;color:var(--mu);border:1px solid var(--ln);border-radius:99px;padding:3px 12px;transition:.2s}
 § .stp span.ok{color:var(--ok);border-color:rgba(110,231,160,.55)}
@@ -1262,24 +1262,27 @@ if(window.__MK_EMERGENCY_ONLY){setTimeout(()=>{try{$('#open').click()}catch(e){}
 § .b.g{border-color:var(--ln);background:transparent;color:var(--mu)}
 § .b.g:hover{border-color:var(--bad);color:var(--bad)}
 @media(max-width:700px){
-§{padding:0;align-items:stretch}
-§ .dlg{width:100vw;max-width:100vw;height:100vh;height:100dvh;max-height:100dvh;border-radius:0;border-left:0;border-right:0}
-§ .hd{padding:12px 14px;padding-top:max(12px,env(safe-area-inset-top))}
-§ .hd h2{font-size:clamp(.9rem,4vw,1.05rem);letter-spacing:.08em}
-§ .hd p{font-size:.8rem}
-§ .tx{padding:14px 14px 20px;-webkit-overflow-scrolling:touch}
-§ .tx h3{font-size:.9rem;margin:16px 0 6px}
-§ .tx p{font-size:.86rem}
-§ .tx .lic{font-size:11px;padding:12px;overflow-x:auto}
-§ .ft{padding:12px 14px;padding-bottom:max(12px,env(safe-area-inset-bottom));gap:10px}
-§ .ac{flex-direction:column-reverse}
-§ .ac .b{flex:1;width:100%;min-height:46px}
-§ .ck{font-size:.82rem}
-§ .stp span{font-size:.72rem;padding:3px 10px}
+§{padding:0;align-items:stretch;place-items:stretch}
+§ .dlg{width:100%;max-width:100%;height:100%;min-height:100vh;min-height:100dvh;max-height:100dvh;border-radius:0;border:0}
+§ .hd{padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top))}
+§ .hd h2{font-size:clamp(.85rem,4.2vw,1.05rem);letter-spacing:.06em;line-height:1.25;word-break:break-word}
+§ .hd p{font-size:clamp(.72rem,3.2vw,.82rem);line-height:1.35}
+§ .tx{padding:12px 14px 16px;-webkit-overflow-scrolling:touch;flex:1 1 auto;min-height:30vh}
+§ .tx h3{font-size:clamp(.82rem,3.8vw,.95rem);margin:14px 0 6px;line-height:1.3}
+§ .tx p{font-size:clamp(.8rem,3.5vw,.9rem);line-height:1.45}
+§ .tx .lic{font-size:clamp(10px,2.8vw,12px);padding:10px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+§ .ft{padding:10px 14px;padding-bottom:max(12px,env(safe-area-inset-bottom));gap:8px}
+§ .stp{gap:6px}
+§ .stp span{font-size:clamp(.65rem,2.8vw,.75rem);padding:4px 10px;max-width:100%;white-space:normal;line-height:1.3}
+§ .ck{font-size:clamp(.78rem,3.4vw,.88rem);line-height:1.4;gap:8px}
+§ .ck span{min-width:0;overflow-wrap:anywhere;word-break:break-word}
+§ .ac{flex-direction:column-reverse;gap:8px}
+§ .ac .b{flex:1;width:100%;min-height:46px;font-size:clamp(.9rem,3.6vw,1rem)}
 }
 @media(max-width:380px){
 § .hd h2{letter-spacing:.04em}
 § .tx .lic{font-size:10px}
+§ .stp span{font-size:.65rem}
 }
 @media(prefers-color-scheme:light){
 §{--bg:#f6f3ec;--ln:rgba(20,30,50,.14);--tx:#1b1d22;--mu:#565e6c;--acc:#8a6516;--acc2:#6b4a08;--ok:#0b7a5a;--bad:#c0392b;background:rgba(236,232,222,.94)}
@@ -2024,16 +2027,9 @@ SOFTWARE.</div>
       <div class="str"><i id="${NS}-str"></i></div>
       <label>Conferma password</label>
       <input type="password" id="${NS}-p2" autocomplete="new-password" spellcheck="false">
-      <label class="ck" style="display:flex;gap:10px;align-items:flex-start;margin-top:12px;cursor:pointer;font-size:.84rem;line-height:1.4">
-        <input type="checkbox" id="${NS}-gz" style="margin-top:3px;flex:none">
-        <span>Comprimi prima della cifratura<br><small style="color:var(--mu)">Opzionale e disattivata di default (massima compatibilità). Richiede browser recenti.</small></span>
-      </label>
-      <label style="display:block;margin-top:8px;font-size:.8rem;color:var(--mu)">Algoritmo
-        <select id="${NS}-gz-algo" disabled style="display:block;width:100%;margin-top:4px;padding:8px 10px;border-radius:8px;border:1px solid var(--ln);background:rgba(0,0,0,.25);color:var(--tx);font:inherit">
-          <option value="gzip">Gzip</option>
-          <option value="deflate">Deflate</option>
-        </select>
-        <small style="color:var(--mu)">Brotli non è disponibile nelle API native del browser (niente librerie esterne): solo Gzip e Deflate.</small>
+      <label class="ck" style="display:flex;gap:10px;align-items:flex-start;margin-top:14px;cursor:pointer;font-size:.84rem;line-height:1.45">
+        <input type="checkbox" id="${NS}-gz" style="margin-top:3px;flex:none;width:18px;height:18px">
+        <span style="min-width:0"><b>Comprimi con Gzip</b> prima della cifratura<br><small style="color:var(--mu);display:block;margin-top:4px;line-height:1.4">Opzionale, disattivata di default. Riduce la dimensione del file. Richiede browser recenti (Chrome 80+, Safari 16.4+, Firefox 113+). Lascia disattivato per massima compatibilità.</small></span>
       </label>
       <div class="actions" style="justify-content:center;margin-top:14px">
         <button class="btn ghost" id="${NS}-pcancel">Annulla</button>
@@ -2054,9 +2050,6 @@ SOFTWARE.</div>
       bar.style.width = score + "%";
       bar.style.background = (v.length < MIN_PWD || uniq < 8) ? "var(--bad)" : v.length < 20 ? "#f0b35a" : "var(--ok)";
     };
-    const gzCk = document.getElementById(NS + "-gz");
-    const gzAlgo = document.getElementById(NS + "-gz-algo");
-    if (gzCk && gzAlgo) gzCk.onchange = () => { gzAlgo.disabled = !gzCk.checked; };
     $(`#${NS}-pcancel`).onclick = () => renderMain();
     $(`#${NS}-pgo`).onclick = async () => {
       const a = p1.value;
@@ -2069,9 +2062,7 @@ SOFTWARE.</div>
         $(`#${NS}-pgo`).textContent = "Derivazione chiave…";
         const plain = buildCaveauHTML(state.V);
         const gzEl = document.getElementById(NS + "-gz");
-        const algoEl = document.getElementById(NS + "-gz-algo");
-        const wantGz = !!(gzEl && gzEl.checked);
-        const algo = wantGz && algoEl ? algoEl.value : null;
+        const algo = (gzEl && gzEl.checked) ? "gzip" : null;
         const enc = await encryptPayload(plain, a, algo);
         // Clear passwords immediately
         p1.value = "";
