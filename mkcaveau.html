@@ -63,7 +63,7 @@
     <p class="hint">Rigenera un gate nuovo per avere il fix emergenza.</p>
   </div>
   
-  <script type="text/javascript">
+<script type="text/javascript">
 /**
  * MKCaveauMaker — Portable tactical configuration forge for personal secure vaults
  * Self-contained IIFE. Zero external dependencies. Client-side only.
@@ -592,7 +592,7 @@ ${LICENSE_NOTICE}
 <link rel="shortcut icon" href="${fav}">
 </head>
 <body style="margin:0;background:#0a0c0f;color-scheme:dark light">
-<script>
+<script type="text/javascript">
 (function(){
 try{
 const b=atob("${b64}");
@@ -626,7 +626,7 @@ document.body.innerHTML="<div style='color:#ff3b5c;text-align:center;margin-top:
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0d12'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23c8a45c' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23c8a45c'/%3E%3Cpath d='M16 5v4M16 23v4M5 16h4M23 16h4' stroke='%23c8a45c' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
 <title>MKCaveau — Accesso protetto</title>
 ${LICENSE_NOTICE}
-<style>
+<style type="text/css">
 :root{--bg:#07090d;--tx:#e6e9ee;--mu:#8691a2;--au:#c8a45c;--au2:#f1dca4;--bad:#ff8c8c;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;color-scheme:dark light}
 *{box-sizing:border-box;margin:0}
 html{height:100%;background:var(--bg)}
@@ -751,7 +751,7 @@ button#btn:hover:not(:disabled){background:rgba(138,101,22,.2);box-shadow:0 0 24
   </div>
 </div>
 <p class="cpr">MKCaveau — Licenza MIT — Copyright © 2026 zMykerd</p>
-<script>
+<script type="text/javascript">
 "use strict";
 const MAX_ATTEMPTS=7,COOLDOWN_SEC=12,
 SALT=Uint8Array.from(atob("${enc.salt}"),c=>c.charCodeAt(0)),
@@ -798,7 +798,7 @@ if(emergencyOnly){
 }
 document.open();
 if(emergencyOnly){
-  document.write("<script>window.__MK_EMERGENCY_ONLY=true;<\\/script>");
+  document.write('<script type="text/javascript">window.__MK_EMERGENCY_ONLY=true;</scr' + 'ipt>');
 }
 document.write(plain);
 document.close();
@@ -847,7 +847,7 @@ If you receive any email, formal request, legal notice, or automated takedown de
 ${LICENSE_NOTICE}
 ${archiveNotice}
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0d12'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23c8a45c' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23c8a45c'/%3E%3Cpath d='M16 5v4M16 23v4M5 16h4M23 16h4' stroke='%23c8a45c' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
-<style>
+<style type="text/css">
 :root{--bg:#07090d;--ln:rgba(200,215,235,.09);--tx:#e6e9ee;--mu:#8691a2;--au:#c8a45c;--au2:#f1dca4;--ok:#6ee7c8;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;color-scheme:dark light}
 *{box-sizing:border-box;margin:0}body{background:var(--bg);color:var(--tx);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;min-height:100%;overflow-x:clip;-webkit-tap-highlight-color:transparent}
 body:before,body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none}
@@ -1092,7 +1092,7 @@ nav{background:rgba(244,241,234,.92)}
 <div id="lb"><button class="lbn" id="lx" aria-label="Chiudi">✕</button><button class="lbn" id="lp" aria-label="Precedente">‹</button><figure><img alt=""><figcaption id="cap"></figcaption></figure><button class="lbn" id="ln" aria-label="Successiva">›</button><div id="lt"><button data-a="out" aria-label="Riduci">−</button><button data-a="in" aria-label="Ingrandisci">+</button><button data-a="l" aria-label="Ruota a sinistra">↺</button><button data-a="r" aria-label="Ruota a destra">↻</button><button data-a="z" aria-label="Ripristina" style="font-size:.85rem">1:1</button></div></div>
 <div id="toast" role="status"></div>
 <div id="cpr">MKCaveau — Licenza MIT — Copyright © 2026 zMykerd</div>
-<script>
+<script type="text/javascript">
 (()=>{"use strict";
 const PH="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23161c26'/%3E%3Cpath d='M0 0l400 300M400 0L0 300' stroke='%23c8a45c' stroke-opacity='.3'/%3E%3Crect x='20' y='20' width='360' height='360' rx='14' fill='none' stroke='%23c8a45c' stroke-opacity='.6'/%3E%3C/svg%3E";
 const _VR=${vSrc};
