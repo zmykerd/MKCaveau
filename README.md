@@ -9,7 +9,7 @@
 
 Il progetto è realizzato con HTML, CSS e JavaScript lato client. Non richiede un server applicativo, un database o un account. L'archivio generato è autonomo e può essere conservato come file HTML.
 
-> **Avvertenza importante:** MKCaveau è progettato per trattare dati sensibili, ma un'applicazione HTML/JavaScript eseguita nel browser non equivale a un gestore di password sottoposto ad audit. Le funzioni di cifratura proteggono il contenuto del file a riposo; non rendono sicuro un dispositivo compromesso, non impediscono la copia dei dati dopo lo sblocco e non sostituiscono backup, aggiornamenti e buone pratiche operative. Leggere attentamente la sezione Sicurezza: cosa protegge e cosa no.
+> **Avvertenza importante:** MKCaveau è progettato per trattare dati sensibili, ma un'applicazione HTML/JavaScript eseguita nel browser non equivale a un gestore di password sottoposto ad audit. Le funzioni di cifratura proteggono il contenuto del file a riposo; non rendono sicuro un dispositivo compromesso, non impediscono la copia dei dati dopo lo sblocco e non sostituiscono backup, aggiornamenti e buone pratiche operative. Leggere attentamente la sezione [Sicurezza: cosa protegge e cosa no](#8-sicurezza-cosa-protegge-e-cosa-no).
 
 ---
 
@@ -46,7 +46,7 @@ Il progetto è realizzato con HTML, CSS e JavaScript lato client. Non richiede u
 - [5. Sezioni incluse nel modello iniziale](#5-sezioni-incluse-nel-modello-iniziale)
 - [6. Aspetto grafico e adattabilità](#6-aspetto-grafico-e-adattabilità)
 - [7. Tecnologie e compatibilità](#7-tecnologie-e-compatibilità)
-- [8. Sicurezza: cosa protegge e cosa no](#sicurezza-cosa-protegge-e-cosa-no)
+- [8. Sicurezza: cosa protegge e cosa no](#8-sicurezza-cosa-protegge-e-cosa-no)
 - [9. Guida operativa consigliata](#9-guida-operativa-consigliata)
 - [10. Limiti e comportamenti da conoscere](#10-limiti-e-comportamenti-da-conoscere)
 - [Licenza](#licenza)
