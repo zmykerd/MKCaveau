@@ -1,6 +1,5 @@
 <img width="1597" height="860" alt="Schermata_20261113_150758" src="https://github.com/user-attachments/assets/9976cc31-8c81-4354-b9af-d06ed84eb332" />
 
-
 # MKCaveau
 
 **MKCaveau** è un archivio personale offline, generato come singolo file HTML, pensato per raccogliere informazioni private, documenti, codici, contatti, scadenze e procedure da consultare quando necessario. Il progetto comprende due componenti che lavorano insieme:
@@ -10,7 +9,7 @@
 
 Il progetto è realizzato con HTML, CSS e JavaScript lato client. Non richiede un server applicativo, un database o un account. L'archivio generato è autonomo e può essere conservato come file HTML.
 
-> **Avvertenza importante:** MKCaveau è progettato per trattare dati sensibili, ma un'applicazione HTML/JavaScript eseguita nel browser non equivale a un gestore di password sottoposto ad audit. Le funzioni di cifratura proteggono il contenuto del file a riposo; non rendono sicuro un dispositivo compromesso, non impediscono la copia dei dati dopo lo sblocco e non sostituiscono backup, aggiornamenti e buone pratiche operative. Leggere attentamente la sezione [Sicurezza: cosa protegge e cosa no](#sicurezza-cosa-protegge-e-cosa-no).
+> **Avvertenza importante:** MKCaveau è progettato per trattare dati sensibili, ma un'applicazione HTML/JavaScript eseguita nel browser non equivale a un gestore di password sottoposto ad audit. Le funzioni di cifratura proteggono il contenuto del file a riposo; non rendono sicuro un dispositivo compromesso, non impediscono la copia dei dati dopo lo sblocco e non sostituiscono backup, aggiornamenti e buone pratiche operative. Leggere attentamente la sezione Sicurezza: cosa protegge e cosa no.
 
 ---
 
