@@ -1,5 +1,3 @@
-<img width="1597" height="860" alt="Schermata_20261113_150758" src="https://github.com/user-attachments/assets/9976cc31-8c81-4354-b9af-d06ed84eb332" />
-
 # MKCaveau
 
 **MKCaveau** è un archivio personale offline, generato come singolo file HTML, pensato per raccogliere informazioni private, documenti, codici, contatti, scadenze e procedure da consultare quando necessario. Il progetto comprende due componenti che lavorano insieme:
@@ -324,8 +322,6 @@ Dopo aver generato il file, il Maker revoca l'URL temporaneo creato per il downl
 # 2. Gate: accesso al file protetto
 
 Il Gate è la schermata iniziale del file HTML esportato. Presenta il marchio MKCaveau, un indicatore grafico animato, un campo password e il pulsante **Apri il caveau**.
-
-Piccola nota: è stato di recente aggiunto anche un sistema per impedire di copiare facilmente e selezionare elementi.
 
 ## Accesso standard
 
