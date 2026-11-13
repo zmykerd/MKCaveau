@@ -591,7 +591,7 @@ SOFTWARE.
 ${LICENSE_NOTICE}
 <link rel="shortcut icon" href="${fav}">
 </head>
-<body style="background:#000;margin:0">
+<body style="margin:0;background:#0a0c0f;color-scheme:dark light">
 <script>
 (function(){
 try{
@@ -668,23 +668,55 @@ button#btn:disabled{opacity:.4;cursor:not-allowed}
   #gate{padding:12px 16px}
   .opt{padding:8px 10px;margin-bottom:8px}
 }
+@media(max-width:640px){
+  body{justify-content:flex-start;padding-top:max(16px,env(safe-area-inset-top));overflow:auto}
+  #gate{width:100%;max-width:100%;border-radius:16px;margin:0 auto}
+  .notice{max-height:min(32vh,240px)}
+  h1{letter-spacing:.2em;margin-right:-.2em}
+}
+@media(max-width:420px){
+  h1{font-size:clamp(1.15rem,6vw,1.45rem);letter-spacing:.14em;margin-right:-.14em}
+  .sub{font-size:.85rem}
+  .opt span{font-size:.8rem}
+  .opt small{font-size:.72rem}
+  #gate{padding:clamp(14px,4vw,22px) clamp(12px,3.5vw,18px);border-radius:14px}
+  .notice{font-size:.68rem;max-height:min(28vh,200px)}
+  button#btn{min-height:48px}
+}
 @media(max-width:360px){
-  h1{letter-spacing:.18em;margin-right:-.18em}
+  h1{letter-spacing:.12em;margin-right:-.12em}
   .opt span{font-size:.78rem}
 }
+
 @media(prefers-color-scheme:light){
-:root{--bg:#f4f1ea;--tx:#1b1d22;--mu:#565e6c;--au:#8a6516;--au2:#6b4a08;--bad:#c0392b}
-body{background-image:radial-gradient(900px 500px at 50% -15%,rgba(138,101,22,.16),transparent 58%),radial-gradient(600px 450px at 100% 110%,rgba(11,122,90,.06),transparent 55%)}
-body:before{background:linear-gradient(rgba(20,30,50,.06) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,rgba(20,30,50,.06) 1px,transparent 1px) 0 0/48px 48px}
-#gate{background:linear-gradient(180deg,#fff,rgba(255,255,255,.72));border-color:rgba(138,101,22,.3);box-shadow:0 30px 80px -30px rgba(20,30,50,.4)}
-.dial{filter:drop-shadow(0 0 14px rgba(138,101,22,.25))}
-input[type=password]{background:#fff;border-color:rgba(20,30,50,.2)}
-input::placeholder{color:#7a8290}
-.opt{border-color:rgba(138,101,22,.28);background:rgba(138,101,22,.07)}
-button#btn{background:rgba(138,101,22,.1)}
-button#btn:hover:not(:disabled){background:rgba(138,101,22,.2);box-shadow:0 0 24px rgba(138,101,22,.22)}
+:root{--bg:#efe9df;--tx:#1b1d22;--mu:#565e6c;--au:#8a6516;--au2:#6b4a08;--bad:#c0392b}
+html{background:#efe9df!important}
+html,body{
+  background-color:#efe9df!important;
+  background-image:
+    radial-gradient(ellipse 900px 520px at 50% -10%,rgba(180,140,60,.18),transparent 58%),
+    radial-gradient(ellipse 700px 480px at 100% 110%,rgba(90,140,110,.08),transparent 55%),
+    radial-gradient(ellipse 500px 400px at 0% 80%,rgba(200,170,100,.08),transparent 50%)!important;
+  background-attachment:fixed
+}
+body:before{
+  background:
+    linear-gradient(rgba(20,30,50,.045) 1px,transparent 1px) 0 0/48px 48px,
+    linear-gradient(90deg,rgba(20,30,50,.045) 1px,transparent 1px) 0 0/48px 48px;
+  opacity:.55;
+  -webkit-mask:radial-gradient(75% 65% at 50% 40%,#000,transparent);
+  mask:radial-gradient(75% 65% at 50% 40%,#000,transparent)
+}
+#gate{background:linear-gradient(180deg,#fffcf7,rgba(255,252,247,.85));border-color:rgba(138,101,22,.28);box-shadow:0 28px 70px -24px rgba(40,30,15,.28),inset 0 1px rgba(255,255,255,.9)}
+.dial{filter:drop-shadow(0 0 14px rgba(138,101,22,.22));color:var(--au)}
+input[type=password]{background:#fff;border-color:rgba(20,30,50,.16);color:var(--tx)}
+input::placeholder{color:#8a929e}
+.opt{border-color:rgba(138,101,22,.26);background:rgba(138,101,22,.06)}
+button#btn{background:rgba(138,101,22,.1);color:var(--au2)}
+button#btn:hover:not(:disabled){background:rgba(138,101,22,.2);box-shadow:0 0 24px rgba(138,101,22,.2)}
 #cooldown{color:#9a5b00}
-.notice{background:rgba(138,101,22,.07)}
+.notice{background:rgba(138,101,22,.06);border-left-color:var(--au);color:var(--mu)}
+.cpr{color:#6b7380}
 }
 .cpr{position:relative;z-index:10;margin:clamp(10px,2.5vw,18px) auto 0;font-size:.72rem;letter-spacing:.02em;color:var(--mu);text-align:center;opacity:.85}
 @media(pointer:coarse){input[type=password]{font-size:16px}button#btn{min-height:48px}}
