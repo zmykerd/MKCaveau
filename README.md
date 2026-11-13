@@ -1,3 +1,6 @@
+<img width="1597" height="860" alt="Schermata_20261113_150758" src="https://github.com/user-attachments/assets/9976cc31-8c81-4354-b9af-d06ed84eb332" />
+
+
 # MKCaveau
 
 **MKCaveau** è un archivio personale offline, generato come singolo file HTML, pensato per raccogliere informazioni private, documenti, codici, contatti, scadenze e procedure da consultare quando necessario. Il progetto comprende due componenti che lavorano insieme:
